@@ -1,3 +1,4 @@
+// <<<<<<< HEAD
 function xCheck(xMouse,xMagneto,radius){
 	if (Math.abs(xMouse - xMagneto) <= radius)
 		return xMagneto;
@@ -26,6 +27,14 @@ function magnetoEffect (mousePos,magnetoPos,radius){
 		mousePos[1] = yCheck(mousePos[1],magnetoPos[i][1],radius);
 	}
 	return mousePos;
+// =======
+
+// var magnetoEffect = { 
+// 	method1: function( param ) {
+// 	},
+// 	method2: function( param ) {
+// 	}
+// >>>>>>> a468c6f1a00aa6380cc290b74e5d2cdb8c475e53
 };
 
 module.exports.magnetoEffect = magnetoEffect;

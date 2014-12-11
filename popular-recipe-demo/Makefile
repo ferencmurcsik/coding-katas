@@ -1,11 +1,9 @@
 test:
-	@mocha \
+	@./node_modules/.bin/mocha \
 		--reporter spec \
 		--ui tdd
 
 cov:
-<<<<<<< HEAD
-=======
 	@./node_modules/.bin/mocha \
 		--reporter spec \
 		--ui tdd \
@@ -13,17 +11,13 @@ cov:
 		-R html-cov > coverage.html
 
 test-w:
->>>>>>> a468c6f1a00aa6380cc290b74e5d2cdb8c475e53
 	@./node_modules/.bin/mocha \
-		--reporter spec \
-		--ui tdd \
-		--require blanket \
-		-R html-cov > coverage.html
-
-test-w:
-	@mocha \
 		--reporter spec \
 		--ui tdd \
 		--watch
+
+cucumber:
+	./node_modules/.bin/cucumber-js \
+		--format=pretty
 
 .PHONY: test test-w
